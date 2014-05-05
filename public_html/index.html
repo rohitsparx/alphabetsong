@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1 , maximum-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <title>Alphabet Song Game</title>
+
+        <link  rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+        <link  rel="stylesheet" href="assets/css/reset.css">
+        <link  rel="stylesheet" href="assets/css/style.css">
+        <link  rel="stylesheet" href="assets/css/letters-animation.css">
+
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/Icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/images/Icon.png">
+
+        <script type="text/javascript" src="assets/js/lib/html5Preloader.js"></script>
+        <script type="text/javascript" src="assets/js/constants.js"></script>
+        <script type="text/javascript" src="assets/js/lib/audio-fx.js"></script>
+        <script type="text/javascript" src="assets/js/load-all-files.js"></script>
+
+        <script type="text/javascript" src="assets/js/lib/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/lib/lscache.js"></script>
+
+        <script type="text/javascript" src="assets/js/lessons.js"></script>
+        <script type="text/javascript" src="assets/js/initialise.js"></script>
+        <script type="text/javascript" src="assets/js/panel.js"></script>
+        <script type="text/javascript" src="assets/js/local-storage.js"></script>
+        <script type="text/javascript" src="assets/js/letters-animation.js"></script>
+        <script type="text/javascript" src="assets/js/audios.js"></script>
+        <script type="text/javascript" src="assets/js/homescreen.js"></script>
+        <script type="text/javascript" src="assets/js/gamescreen.js"></script>
+        <script type="text/javascript" src="assets/js/completescreen.js"></script>
+        <script type="text/javascript" src="assets/js/randomLetter.js"></script>
+        <script type="text/javascript" src="assets/js/lib/fastclick.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="main">
+                <div class="game-wrapper">
+                    <div class="critical-thinking-link">
+                        <span><i>Alphabet Song Game</i>&trade;</span>
+                        <a target="blank" href="http://www.criticalthinking.com">www.CriticalThinking.com</a>
+                    </div>
+                    <div class="all-panels">
+
+                        <div id="StartScreen" class="panel start-screen">
+                            <a href="http://www.criticalthinking.com" target="_blank" class="logo">Logo</a>
+                            <a href="http://www.criticalthinking.com" target="_blank" class="game-number">10701</a>
+                            <a data-show="GameScreen" href="#" class="arrow">Play Game</a>
+                            <a data-show="HomeScreen" href="#" class="home-btn-text"><img src="assets/images/home-txt.jpg" alt="Home"/></a>
+                        </div>      <!-- StartScreen end here  -->
+
+                        <div id="HomeScreen" class="panel home-screen">
+                            <a href="http://www.criticalthinking.com" target="_blank" class="logo">Logo</a>
+                            <a href="#" class="reset-data" id="ResetData">Reset User Data</a>
+                            <img src="assets/images/asg-text.png" alt="Alphabet Song Game" class="asg-heading">
+                            <a id="playSelected" href="javascript:void(0);" class="arrow">Play Game</a>
+                            <div class="lessons-container-wrapper">
+                                <div class="lessons-container">
+                                    <h3>UPPERCASE Letters</h3>
+                                    <ul class="lessons">
+                                        <li><a data-id="0" href="#" class="active">Lesson 1</a> <span> 10/26 10%</span> </li>
+                                        <li><a data-id="1" href="#">Lesson 2</a> <span class="incomplete">Incomplete</span> </li>
+                                        <li><a data-id="2" href="#">Lesson 3</a> <span> 10/26 10%</span> </li>
+                                        <li><a data-id="3" href="#">Lesson 4</a> <span> 10/26 10%</span> </li>
+                                        <li><a data-id="4" href="#">Lesson 5</a> <span class="incomplete">Incomplete</span> </li>
+                                        <li><a data-id="5" href="#">Lesson 6</a> <span class="played"> 10/26 10%</span> </li>
+                                        <li><a data-id="6" href="#">Lesson 7</a> <span> 10/26 10%</span> </li>
+                                        <li><a data-id="7" href="#">Lesson 8</a> <span class="incomplete">Incomplete</span> </li>
+                                        <li><a data-id="8" href="#">Lesson 9</a> <span> 10/26 10%</span> </li>
+                                    </ul>
+                                </div>
+                                <div class="lessons-container">
+                                    <h3>lowercase Letters</h3>
+                                    <ul class="lessons">
+                                        <li><a data-id="9" href="#">Lesson 1</a> <span> 10/26 10%</span> </li>
+                                        <li><a data-id="10" href="#">Lesson 2</a> <span class="incomplete">Incomplete</span> </li>
+                                        <li><a data-id="11" href="#">Lesson 3</a> <span> 10/26 10%</span> </li>
+                                        <li><a data-id="12" href="#">Lesson 4</a> <span> 10/26 10%</span> </li>
+                                        <li><a data-id="13" href="#">Lesson 5</a> <span class="incomplete">Incomplete</span> </li>
+                                        <li><a data-id="14" href="#">Lesson 6</a> <span> 10/26 10%</span> </li>
+                                        <li><a data-id="15" href="#">Lesson 7</a> <span> 10/26 10%</span> </li>
+                                        <li><a data-id="16" href="#">Lesson 8</a> <span class="incomplete">Incomplete</span> </li>
+                                        <li><a data-id="17" href="#">Lesson 9</a> <span> 10/26 10%</span> </li>
+                                    </ul>
+                                </div>
+                                <div class="lessons-container">
+                                    <h3>Mixed Case Letters</h3>
+                                    <ul class="lessons">
+                                        <li><a data-id="18" href="#">Lesson 1</a> <span class="played"> 10/26 10%</span> </li>
+                                        <li><a data-id="19" href="#">Lesson 2</a> <span class="incomplete">Incomplete</span> </li>
+                                        <li><a data-id="20" href="#">Lesson 3</a> <span class="played"> 10/26 10%</span> </li>
+                                        <li><a data-id="21" href="#">Lesson 4</a> <span> 10/26 10%</span> </li>
+                                    </ul>
+                                    <div class="lesson-description" id="LessonDesc">
+                                        Identify UPPERCASE letter shapes in alphabetical order. <br><br>Two choices
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-links-holder">
+                                <a data-show="HelpfulInfoScreen" href="#">Helpful Information</a>
+                                <a data-show="LicenseScreen" href="#">License Agreement</a>
+                                <a target="_blank" href="http://www.criticalthinking.com/catalogsearch/advanced/result/?grade[]=118">Other Preschool Products</a>
+                            </div>
+                            <div class="lightbox-cover"></div>
+                            <div class="reset-lightbox">
+                                Are you sure you want to reset? This will remove all saved data.
+                                <div class="reset-btns">
+                                    <a href="#">Yes</a>
+                                    <a href="#">No</a>
+                                </div>
+                            </div>
+                        </div>      <!-- HomeScreen end here  -->
+
+                        <div id="GameScreen" class="panel game-screen">
+                            <a data-show="HomeScreen" href="#" class="home-btn">Home</a>
+                            <a href="http://www.criticalthinking.com" target="_blank" class="logo">Logo</a>
+                            <div class="lesson-name" id="LessonTitle">Uppercase Lesson 1 of 9</div>
+                            <a href="#" class="teacher" id="Tutor">
+                                <img id="TeacherMessage" src="assets/images/teacher-stop.png" alt="Teacher"/>
+                                <!--<span id="TeacherMessage"><small>Replay</small><small>Instructions</small></span>-->
+                            </a>
+
+                            <div class="alphabet-holder" id="AlphabetHolder">
+                                <div class="alphabet">A</div>
+                                <div class="alphabet">B</div>
+                                <div class="alphabet">C</div>
+                                <div class="alphabet">D</div>
+                                <div class="alphabet">E</div>
+                                <div class="alphabet">F</div>
+                                <div class="alphabet">G</div>
+                                <div class="alphabet">H</div>
+                                <div class="alphabet">I</div>
+                                <div class="alphabet">J</div>
+                                <div class="alphabet">K</div>
+                                <div class="alphabet">L</div>
+                                <div class="alphabet">M</div>
+                                <div class="alphabet">N</div>
+                                <div class="alphabet">O</div>
+                                <div class="alphabet">P</div>
+                                <div class="alphabet">Q</div>
+                                <div class="alphabet">R</div>
+                                <div class="alphabet">S</div>
+                                <div class="alphabet">T</div>
+                                <div class="alphabet">U</div>
+                                <div class="alphabet">V</div>
+                                <div class="alphabet">W</div>
+                                <div class="alphabet">X</div>
+                                <div class="alphabet">Y</div>
+                                <div class="alphabet">Z</div>
+                            </div>
+
+                            <div id="HorizontalAnimationHolder">
+                                <div class="alphabet">A</div>
+                                <div class="alphabet">B</div>
+                                <div class="alphabet">C</div>
+                                <div class="alphabet">D</div>
+                                <div class="alphabet">E</div>
+                                <div class="alphabet">F</div>
+                                <div class="alphabet">G</div>
+                                <div class="alphabet">H</div>
+                                <div class="alphabet">I</div>
+                                <div class="alphabet">J</div>
+                                <div class="alphabet">K</div>
+                                <div class="alphabet">L</div>
+                                <div class="alphabet">M</div>
+                                <div class="alphabet">N</div>
+                                <div class="alphabet">O</div>
+                                <div class="alphabet">P</div>
+                                <div class="alphabet">Q</div>
+                                <div class="alphabet">R</div>
+                                <div class="alphabet">S</div>
+                                <div class="alphabet">T</div>
+                                <div class="alphabet">U</div>
+                                <div class="alphabet">V</div>
+                                <div class="alphabet">W</div>
+                                <div class="alphabet">X</div>
+                                <div class="alphabet">Y</div>
+                                <div class="alphabet">Z</div>
+                            </div>
+
+                            <div class="play-area" id="playArea">
+                            </div>
+
+
+                        </div>      <!-- GameScreen end here  -->
+
+                        <div id="CompleteScreen" class="panel complete-panel">
+                            <a data-show="HomeScreen" href="#" class="home-btn">Home</a>
+                            <img src="assets/images/complete-text.png" alt="Completed" class="complete-text"/>
+                            <h1 class="score" id="Score">Score: <span>24 (92%)</span></h1>
+                            <div class="btn-container">
+                                <a id="playAgainBtn" href="javascript:void(0);" class="arrow orange">Play Again</a>
+                                <a id="nextGameBtn" href="javascript:void(0);" class="arrow">Next Game</a>
+                                <a id="FinishBtn" href="javascript:void(0);" class="arrow">Finish</a>
+                            </div>
+                        </div>      <!-- CompleteScreen end here  -->
+
+                        <div id="LicenseScreen" class="panel">
+                            <h1>License Agreement</h1>
+                            <div class="info-content">
+                                <img src="assets/images/logo.png" alt="Critical thinking" class="faded-logo" />
+                                <h3 class="first">The Critical Thinking Co.&trade; </h3>
+                                <h3>Software License Agreement </h3>
+                                <h3>Important-read carefully </h3>
+                                <p class="first">This is a legal agreement between you (a single entity, company, or educational institution) and The Critical Thinking Co.&trade; for the software accompanying this agreement, which includes computer Software and associated Documentation. &nbsp;By installing this Software on a computer, you agree to be bound by the terms of this agreement. &nbsp;If you do not agree to the terms of this agreement, promptly erase all copies of the software in your possession and return any Software packaging associated with this order within sixty (60) days of purchase to the place from which you obtained it for a full refund.</p>
+                                <p>The Critical Thinking Co.&trade; hereby grants to you a non-exclusive license to use the software product identified above (the "Software") and the accompanying printed materials and User Manual (the "Documentation") on the terms set forth below.</p>
+                                <p><b>1. &nbsp;GRANT OF LICENSE.</b> &nbsp; The Critical Thinking Co.&trade; grants you the right to install and use this Software Product, provided that this software will be installed only in the quantity and for the computer system(s) indicated (home-use or school/institution-use) at the time of your order for the Software. 
+                                    <br><br><b>a.</b> &nbsp;  Home-use Licensees may only use the Licensed Software for personal, non-commercial, and non-government purposes. 
+                                    <br><br><b>b.</b> &nbsp; School/Institution Licensees may only use the Licensed Software as a teaching aid or in connection with students' course work within the educational facility. &nbsp;If your company or educational institution consists of more than one non-contiguous physical location, then a separate license is required for each separate location. &nbsp;If you have acquired a multiple-user license, you may make the number of additional copies of the Software authorized on the packaging of this Software only.</p>
+                                <p><b>2. &nbsp;COPYRIGHT.</b> &nbsp; The Software Product and Documentation are protected by copyright laws and international copyright treaties as well as other intellectual property laws and treaties. &nbsp;Therefore, you must treat the Software Product like any other copyrighted material.&nbsp; You may not remove, modify, or alter any of The Critical Thinking Co.&trade;'s copyright or trademark notices from any part originally contained in or otherwise created by the Software Product, including any notices contained in the Documentation.</p>
+                                <p><b>3. &nbsp;RESTRICTIONS.</b> &nbsp; You may not modify, translate, reverse engineer, decompile, disassemble, or create derivative works based on the Software, or any portion thereof.&nbsp; The Software Product is licensed as a single product. &nbsp;This Software Product can be installed on a computer as a whole and shall not be separated in parts or disassembled to parts or pieces. &nbsp;You may not rent, lease, or lend the Software or Documentation to any other party without the written permission of The Critical Thinking Co.&trade;  The License is in effect until terminated. &nbsp;The License will terminate automatically if you fail to comply with the limitations described herein.&nbsp; On termination, you must destroy all copies of the Software and Documentation.</p>
+                                <p><b>4. &nbsp;WARRANTIES.</b> &nbsp; The Critical Thinking Co.&trade; expressly disclaims any warranty for the Software Product.&nbsp; The Software and Documentation are provided "as is" without warranty of any kind, either expressed or implied, including, without limitation, the implied warranties or merchantability, fitness for a particular purpose, or non-infringement.&nbsp; The entire risk arising out of use or performance of the Software remains with you.&nbsp; If media within this package is defective, remove the software application from your device(s) and return any software packaging associated with this order to The Critical Thinking Co.&trade; within 60 days of the date of purchase, and they will replace it at no charge. </p>
+                                <p><b>5. &nbsp;NO LIABILITY FOR CONSEQUENTIAL DAMAGES.</b> &nbsp; In no event shall The Critical Thinking Co.&trade; or its suppliers be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use of or inability to use this Software Product, even if The Critical Thinking Co.&trade; has been advised of the possibility of such damages.&nbsp; Because some states/jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, the above limitation may not apply to you. </p>
+                                <p><b>6. &nbsp;MISCELLANEOUS.</b> &nbsp; This Agreement represents the complete agreement concerning this license between the parties and supersedes all prior agreements and representations between them.&nbsp; This Agreement may be amended only in writing executed by both parties.&nbsp; The acceptance of any purchase order placed by you is expressly made conditional on your assent to the terms set forth herein, and not those contained within your purchase order.&nbsp; If any provision of this Agreement is held to be unenforceable for any reason, such provision shall be reformed only to the extent necessary to make it enforceable and the remainder of this Agreement shall nonetheless remain in full force and effect.&nbsp; If you acquired this product in the United States, the laws of the State of California govern this Agreement.&nbsp; If this product was acquired outside the United States, then local laws may apply.&nbsp; Should you have any questions concerning this Agreement, or if you desire to contact The Critical Thinking Co.&trade; for any reason, please write to The Critical Thinking Co.&trade;, 1991 Sherman Avenue, Suite 200, North Bend, OR, 97459, USA; send a fax to 541-756-1758; send emails to <a href="mailTo:service@criticalthinking.com">service@criticalthinking.com</a>; call 800-458-4849; or refer to The Critical Thinking Co.&trade;'s Website at <a href="http://www.CriticalThinking.com" target="blank">www.CriticalThinking.com</a>.</p>
+                            </div>
+                            <div class="btn-back-wrapper">
+                                <ul class="copyright">
+                                    <li> &copy; 2014 The Critical Thinking Co.&trade;</li>
+                                    <li><a target="blank" href="http://www.criticalthinking.com">www.CriticalThinking.com</a></li>
+                                    <li>800-458-4849</li>
+                                </ul>
+                                <a data-show="HomeScreen" href="#" class="round-btn">Back</a>
+                            </div>
+                        </div>      <!-- LicenseScreen end here  -->
+
+                        <div id="HelpfulInfoScreen" class="panel">
+                            <h1>Helpful Information</h1>
+                            <div class="helpful-info">
+                                <h2>Alphabet Song Game™</h2>
+                                <h3>Helpful Information</h3>
+                                <p>The <em>Alphabet Song Game</em>™ is a simple, fun way to teach the alphabet.&nbsp; Although easy to play, the 22 lessons go well beyond recognizing letter shapes.&nbsp; Students learn to:</p>
+                                <ul>
+                                    <li>recognize upper and lowercase letter shapes.</li>
+                                    <li>recognize letter names.</li>
+                                    <li>distinguish each letter among similarly shaped letters.</li>
+                                    <li>distinguish commonly confused letter pairs.</li>
+                                    <li>distinguish uppercase and lowercase letters.</li>
+                                </ul>
+
+                                <p>The <em>Alphabet Song Game™</em> is designed to allow students to work independently, but when working with a young child, we strongly suggest working alongside the child—at least through the first two lessons.</p>
+                                <p>The automatic lesson selection built in to the app will give students who score 90% correct or higher the opportunity to repeat the lesson they just completed or move on to the next lesson.&nbsp; When students score below 90%, they are only offered the option to repeat the lesson just completed.</p>
+
+                                <h3>Home Page</h3>
+                                <p>The Home page lists the student’s scores for each lesson and provides parents and teachers the functionality below:</p>
+                                <p><span class='underlined'>Reset User Data</span> is a link in the upper right corner that clears all data and allows a student to begin all of the lessons again or begins collecting data on a new student.</p>
+                                <p><span class='underlined'>Other Preschool Products</span> is a link to other award-winning preschool—kindergarten products from The Critical Thinking Co.™.</p>
+
+                                <h3>Credits</h3>
+                                <p>Designed by Michael Baker, James Meyers, Sarah Rigney, Patricia Gray, Jesse Spinella, Terry McDonald, Abbey Hunt, Scott Slyter, and Chip Dombrowski.</p>
+                                <p>Programming by James Meyers and <a href="http://www.sparxitsolutions.com" target="blank">Sparx IT Solutions</a>.</p>
+                                <p>Audio by Julianna Seldon.</p>
+                                <p>If you like this product, we hope you will help us spread the word about our award-winning products that can be found on our website:  <a href="http://www.CriticalThinking.com" target="blank">CriticalThinking.com</a>.</p>
+                                <p>ISBN 978-1-60144-662-6</p>
+                            </div>
+                            <div class="btn-back-wrapper">
+                                <ul class="copyright">
+                                    <li> &copy; 2014 The Critical Thinking Co.&trade;</li>
+                                    <li><a target="blank" href="http://www.criticalthinking.com">www.CriticalThinking.com</a></li>
+                                    <li>800-458-4849</li>
+                                </ul>
+                                <a data-show="HomeScreen" href="#" class="round-btn">Back</a>
+                            </div>
+                        </div>   <!-- HelpfulInfoScreen end here  -->
+
+                        <div id="CongratsScreen" class="panel congrats-panel">
+                            <div class="congrats-message-wrapper">
+                                <div class="congrats-message">
+                                    <h2>Congratulations!</h2>
+                                    <p>You have finished all of the <i>Alphabet Song</i> games!  To play the games again, press the reset link in the upper right hand corner of the home page.</p>
+                                    <a data-show="HomeScreen" href="#" class="round-btn">Home</a>
+                                </div>
+                            </div>
+                        </div>      <!-- Congrats screen end here  -->
+
+                    </div>          <!-- all panels end here  -->
+                    <div id="LoadingScreen" class="loading-panel"></div>
+                    <div id="DeactivateScreen" class="deactive-panel"></div>
+                </div>
+            </div>
+        </div>
+        <!--<div style="height: 580px; margin-left: -480px; background: rgba(255,22,63,0.2); width: 960px; z-index: 10; position: absolute; border-bottom: red 1px dashed; top: 0; left: 50%;"></div>-->
+    </body>
+</html>

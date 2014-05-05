@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+/*    Global styling    */
+
+body , p{ font-family: ​Arial,​ Helvetica, sans-serif; font-size: 12px; line-height: 1.2; color: #000;}
+h1 , h2 , h3 , h4 , h5 , h6{}
+h1{background: #D3E2FE; text-align: center; line-height: 55px; font-size: 36px; color: #000;}
+p{}
+i{font-style: italic;}
+
+.wrapper {}
+.game-wrapper{ width: 1004px; background: #D9D9D9; border-radius: 8px; padding: 0 10px 10px; position: relative; overflow: hidden;}
+.main{margin: auto; width: 1024px;}
+.all-panels{background: #fff;}
+.panel{position: relative; height: 708px; display: none;}
+.all-panels .panel:first-child{display: block;}
+
+.critical-thinking-link { padding: 0 4px 0 0; text-align: right; overflow: hidden;}
+.critical-thinking-link span { color: #5B594D; float: left; font-size: 11px; line-height: 30px; padding-left: 1px;}
+.critical-thinking-link a {color: #5B594D; font-size: 11px; line-height: 30px;}
+
+/*    Start screen    */
+.start-screen{background: url('../images/start-screen.jpg') repeat top center; background-size: auto 100%;}
+.logo{width: 145px; height: 105px; background: url('../images/logo.png') no-repeat center -20px; background-size: cover; position: absolute; left: 5px; top: 0px; text-indent: -9999px;}
+.game-number{font-size: 20px; position: absolute; top: 0px; right: 0px; padding: 5px 5px 20px 20px;}
+
+a.arrow{color: #fff; line-height: 190px; padding: 0 18px 0 0; font-size: 37px; font-weight: bold; text-align: center; background: url('../images/arrows.png') no-repeat left top; width: 312px; height: 197px; display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.start-screen a.arrow{position: absolute; bottom: 12px; right: 10px;}
+a.arrow.hover, a.arrow.hover-mouse{background-position: top right; opacity: 1 !important; }
+a.arrow.orange{background-position: left bottom; padding: 0 0 0 18px; line-height: 197px;}
+a.arrow.orange.hover, a.arrow.orange.hover-mouse{background-position: bottom right; opacity: 1 !important; }
+
+.home-btn-text{position: absolute; bottom: 12px; left: 25px; background: url('../images/home-btn.png') no-repeat center top; padding: 60px 0 0 0;}
+
+
+/*    Home screen    */
+a.reset-data{font-size: 18px; position: absolute; top: 0px; right: 0px; padding: 5px; text-decoration: underline; color: #555;}
+a.reset-data:hover{ color: #000; }
+img.asg-heading{display: block; margin: auto; padding: 20px 0 35px;}
+.home-screen a.arrow{position: absolute; right: 10px; bottom: 10px;}
+
+.lessons-container-wrapper{overflow: hidden; padding: 0 0 0 90px;}
+.lessons-container{float: left; border-right: 1px solid #878787; margin-right: 15px;}
+.lessons-container h3{color: #81acfc; font-size: 24px; text-align: center;}
+.lessons-container-wrapper .lessons-container:first-child h3{text-align: left; margin-left: -20px;}
+
+ul.lessons{ padding: 20px 0 5px 0;}
+ul.lessons li{overflow: hidden; margin: 0 0 20px 0;}
+ul.lessons li:last-child{margin: 0;}
+ul.lessons li a{color: #101111; width: 125px; line-height: 30px; background: #d3e2fe; width: 125px; border: 1px solid #000; border-radius:4px; float: left; font-size: 20px; text-align: center;}
+ul.lessons li span{font-size: 20px; color: #000; float: left; visibility: hidden; line-height: 32px; width: 120px; padding: 0 0 0 20px; }
+ul.lessons li span.incomplete{color: #808080; visibility: visible;}
+ul.lessons li span.played{visibility: visible;}
+.lesson-description{border: 3px solid #40AE49; border-radius: 5px; width: 300px; height: 80px; font-weight: bold; font-size: 15px; padding: 8px 5px 0; margin-top: 15px;}
+
+.lessons-container:last-child{border: 0;}
+
+.lessons-container:nth-child(2) h3{color: #ecbd2f; margin-left: -8px;}
+.lessons-container:nth-child(2) ul.lessons li a{ background: #fce7b4;}
+
+.lessons-container:nth-child(3) h3{color: #8a8aff; margin-left: -8px;}
+.lessons-container:nth-child(3) ul.lessons li:nth-child(even) a{ background: #fce7b4;}
+
+.lessons-container ul.lessons li:nth-child(n) a:hover{background: #8a8aff;}
+ul.lessons li a.active{background: #40AE49 !important; line-height: 28px; color: #fff; border: 2px solid #000;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 127px;}
+ul.lessons li a.active:hover{background: #2D7932 !important; }
+
+.footer-links-holder{overflow: hidden; text-align: center; margin-left: 5.5%; float: left; }
+.footer-links-holder a{font-size: 18px; text-decoration: underline; color: #000; line-height: 1.5; float: left; width: 140px; margin-top: 17px; margin-right: 60px; }
+.footer-links-holder a:last-child{margin-right: 0;}
+
+/*    Editor contents    */
+
+.info-content{ background: #fffbf2; position: relative; height: 570px; overflow: auto; -webkit-overflow-scrolling: touch; color: #000; font-size: 14px; padding: 0 40px 0 45px;}
+.info-content h3{font-size: 15px; font-weight: bold; text-transform: uppercase; padding: 12px 0 2px 0;}
+.info-content p{font-size: 14px; line-height: 18px; padding-bottom: 10px;}
+.info-content p.first{padding-top: 15px;}
+.info-content h3.first{padding-top: 25px;}
+.info-content b{font-weight: bold; font-size: 15px;}
+.info-content a{color: #0000FF; text-decoration: underline;}
+
+.faded-logo{position: absolute; top: -20px; left: 10px; z-index: 1; opacity: 0.2; height: 150px; width: auto;}
+
+a.round-btn{width: 100px; text-decoration: none !important; line-height: 50px; color: #fff !important; border: 1px solid #646464; border-radius:4px; background: #6464ff; display: block; margin: 30px auto 40px; text-align: center; font-size: 15px; text-shadow: 1px 1px 1px #000000;}
+a.round-btn:hover{background: #1EC6FD;}
+
+.helpful-info{height: 570px; background: #fffbf2; overflow: auto; -webkit-overflow-scrolling: touch; padding: 0 100px;}
+.helpful-info h2{font-weight: bold; font-size: 24px; text-align: center; font-style: italic; line-height: 70px;}
+.helpful-info h3{font-weight: bold; font-size: 20px; padding-bottom: 10px; }
+.helpful-info h3.centererd{text-align: center; }
+.helpful-info p{font-size: 20px; padding-bottom: 20px; }
+.helpful-info ul{font-size: 20px; list-style: square; padding: 0px 0 10px 30px; margin-top: -10px; }
+.helpful-info li{font-size: 20px; padding: 4px 0; }
+.helpful-info em{font-style: italic;}
+.helpful-info span.underlined{text-decoration: underline;}
+.helpful-info a{color: #0000FF; text-decoration: underline;}
+
+.loading-panel{ top: 30px; left: 10px; bottom: 10px; right: 10px; background: url('../images/loading-assets.GIF') no-repeat center center #fdf4cb; position: absolute; z-index: 99;}
+.deactive-panel{ top: 30px; left: 10px; bottom: 10px; right: 10px; position: absolute; z-index: 99; display: none;}
+
+/*    Complete panel  */
+
+.complete-panel{background: #fef5e0;}
+img.complete-text{position: absolute; left: 50%; margin: 0 0 0 -35%; top: 18%; width: 70%;}
+a.home-btn{position: absolute; top: 12px; right: 10px; background: url('../images/home-btn.png') no-repeat center top; text-indent: -9999px; width: 62px; height: 62px;}
+a.home-btn:hover{opacity: 0.7;}
+h1.score{font-size: 50px; background: none; color: #000; text-align: center; width: 100%; position: absolute; bottom: 50%; margin-bottom: -30px;}
+
+.btn-container{overflow: hidden; padding: 0 70px; position: absolute; bottom: 10%; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.btn-container a.arrow{float: right;}
+.btn-container a.arrow:nth-child(1){float: left;}
+
+/*    Game screen   */
+
+.game-screen{border: 30px solid #ffb75e; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.lesson-name{position: absolute; bottom: -37px; left: 0px; font-size: 15px; line-height: 40px; color: #000;}
+.game-screen .logo{background-size: cover; height: 65px; width: 100px; top: 5px; background-position: 0 -18px;}
+.alphabet-holder{background: #d3e2fe; height: 50px; margin: 100px 20px 0; border-radius: 20px; overflow: hidden;}
+
+.teacher{position: absolute; right: 15px; top: 150px; text-align: center;}
+.teacher img{display: block; width: 120px;}
+.teacher span{color: #0000fd; font-size: 15px; padding: 5px 0 0 0; display: inline-block; }
+.teacher span small{border-bottom: 1px solid #0000fd; }
+.teacher span small:nth-child(2){display: block; padding-top: 2px;}
+
+.reset-lightbox{background: #fff; display: none; color: #000; text-align: center; font-size: 18px; border: 1px solid #000; border-radius: 8px; padding: 25px 35px; position: absolute; width: 360px; margin-left: -215px; left: 50%; top: 25%;}
+.reset-lightbox .reset-btns{overflow: hidden; padding: 20px 0 0 0;}
+.reset-lightbox a{width: 125px; line-height: 50px; color: #fff; border: 1px solid #000; border-radius:4px; background: #008000; float: left;}
+.reset-lightbox a:hover{opacity: 0.70;}
+.reset-lightbox a:last-child{background: #ff0000; float: right;}
+.lightbox-cover{background: rgba(0,0,0,0.45); display: none; position: absolute; left: 0; right: 0; top: 0; bottom: 0;}
+
+
+.play-area{text-align: center; padding: 0 40px 150px 0; width: 100%; height: 100%; display: table;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.play-area .letter{display: table-cell; vertical-align: middle; margin: 0 50px; }
+.play-area .alphabet{font-size: 180px; color: red; display: inline-block; width: 180px; top: 280px; left: 20px;  }
+
+
+/*    Congrats panel  */
+
+.congrats-panel{background: url('../images/congrats.jpg') no-repeat 0px 0px; background-size: cover;}
+.congrats-message-wrapper{ width: 60%; margin: 0 0 0 20%;  padding-top: 150px;}
+.congrats-message{background: rgba(255,255,255,0.65); border-radius: 8px; text-align: center; padding: 0 20px 20px 20px; }
+.congrats-message h2{color: #000; font-size: 36px; padding: 30px 0 20px 0; font-weight: bold;}
+.congrats-message p{font-size: 19px; color: #000;}
+.congrats-message a.round-btn{margin-bottom: 0;}
+
+a.hover{opacity: 0.7;}
+a.hover-mouse{opacity: 0.85;}
+
+.btn-back-wrapper{ background: #d3e2fe; overflow: hidden; padding: 12px 10px 0px; height: 71px;}
+.btn-back-wrapper a.round-btn{ float: right; margin: 5px 0 0 0;}
+ul.copyright{float: left; background: #eeece1; border: 1px solid #000; padding: 0 0 0 15px; margin: 15px 0 0 35px;}
+ul.copyright li{float: left; line-height: 33px; padding: 0 17px 0 25px; font-size: 17px; position: relative; background: url('../images/dot.png') no-repeat 0px 13px; background-size: 7px 7px;}
+ul.copyright li:first-child{ background: none; padding-left: 0; }
+ul.copyright li a{color: #0000ff; text-decoration: underline;}
+
+
+/*    02/05/14    */
+.game-number{display: none;}
+
